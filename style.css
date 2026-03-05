@@ -1,67 +1,84 @@
 :root {
-    /* 1. СВЪРЗВАМЕ ЦВЕТОВЕТЕ СЪС СИСТЕМАТА НА SUPER */
-    --color-bg-default: var(--color-bg-default) !important;
-    --color-text-default: var(--color-text-default) !important;
-    --color-border-default: var(--color-border-default) !important;
-    --secondary-bg: var(--color-bg-secondary) !important;
-    --heading-text-default: var(--color-text-default) !important;
-    --color-card-bg: var(--color-bg-default) !important;
-    --cta-bg-color: var(--color-bg-secondary) !important;
-    --cta-text-color: var(--color-text-default) !important;
-    
-    /* 2. ТВОИТЕ ЛИЧНИ НАСТРОЙКИ (СТИЛ) */
-    --primary-color: #F46E6F !important; /* Акцентът остава червен */
-    --collection-card-content-padding: 16px !important;
-    --collection-card-border-radii: 12px !important;
-    --collection-card-gap: 16px !important;
-    --collection-card-cover-height-large: 380px !important;
-    --collection-card-icon-display: none !important;
-    --collection-card-title-size: 1.1rem !important;
-    --callout-border-radii: 8px !important;
-    --image-border-radii: 8px !important;
-    --cta-border-radii: 40px !important;
-    --layout-border: 1px !important;
-    --container-width: 800px !important;
-    --cover-max-height: 290px !important;
+  --cta-text-hover-color: #ffffff !important;
+  --navbar-button-text-color: var(--color-text-default) !important;
+  --header-dots: #E1E1E1;
+  --layout-border: 1px;
+  --collection-card-content-padding: 16px !important;
+  --collection-card-border-radii: 12px !important;
+  --collection-card-gap: 16px !important;
+  --collection-card-cover-height-large: 380px !important;
+  --collection-card-icon-display: none !important;
+  --collection-card-title-size: 1.1rem !important;
+  --callout-border-radii: 8px !important;
+  --image-border-radii: 8px !important;
+  --primary-color: #F46E6F !important;
+  --color-bg-default: var(--color-bg-default) !important;
+  --color-text-default: var(--color-text-default) !important;
+  --secondary-bg: var(--color-bg-secondary) !important;
+  --heading-text-default: var(--color-text-default) !important;
+  --color-border-default: var(--color-border-default) !important;
+  --cta-border-radii: 40px !important;
+  --cta-bg-color: var(--color-bg-secondary) !important;
+  --cta-text-color: var(--color-text-default) !important;
+  --container-width: 800px !important;
 }
 
-/* 3. ФИКС ЗА НАВИГАЦИЯТА ВЛЯВО (Sidebar) */
 @media all and (min-width: 861px) {
-  .super-root {
+  /* THE FIX FOR PUBLIC SITE SIDEBAR */
+  #item-page, .super-root, #__next > div {
     display: flex !important;
     flex-direction: row !important;
     align-items: stretch !important;
+    justify-content: flex-start !important;
     min-height: 100vh !important;
+    width: 100% !important;
   }
 
   .super-navbar {
-    width: 260px !important;
-    min-width: 260px !important;
-    height: 100vh !important;
     position: sticky !important;
     top: 0 !important;
+    left: 0 !important;
+    height: 100vh !important;
+    width: 260px !important;
+    min-width: 260px !important;
+    max-width: 260px !important;
     display: flex !important;
     flex-direction: column !important;
     background: var(--color-bg-default) !important;
-    border-right: var(--layout-border) solid var(--color-border-default) !important;
-    z-index: 100 !important;
+    border-right: 1px solid var(--color-border-default) !important;
+    z-index: 9999 !important;
   }
 
   .super-content-wrapper {
     flex: 1 !important;
     display: flex !important;
-    justify-content: center !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    min-width: 0 !important;
+    background: var(--color-bg-default) !important;
+  }
+
+  .super-content {
+    width: 100% !important;
+    max-width: var(--container-width) !important;
+    padding: 80px 40px !important;
   }
 }
 
-/* 4. МОБИЛНА ВЕРСИЯ */
 @media all and (max-width: 860px) {
-  .super-root { flex-direction: column !important; }
-  .super-navbar { width: 100% !important; height: auto !important; position: relative !important; }
+  .super-root, #__next > div {
+    flex-direction: column !important;
+  }
 }
 
-/* 5. ИЗЧИСТВАНЕ НА ТЕКСТА */
+.notion-dropdown__button svg:first-of-type,
+.notion-dropdown__menu-header,
+.super-navbar.hidden {
+  display: none !important;
+}
+
 body {
-    background-color: var(--color-bg-default) !important;
-    color: var(--color-text-default) !important;
+  background-color: var(--color-bg-default) !important;
+  color: var(--color-text-default) !important;
+  margin: 0 !important;
 }
