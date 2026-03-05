@@ -1,120 +1,62 @@
 :root {
-    --cta-text-hover-color: #ffffff !important;
-    --navbar-button-text-color: var(--color-text-default) !important;
-    --header-dots: #E1E1E1;
-    --layout-border: 1px;
-    --collection-card-content-padding: 16px !important;
-    --collection-card-border-radii: 12px !important;
-    --collection-card-gap: 16px !important;
-    --collection-card-cover-height-large: 380px !important;
-    --collection-card-icon-display: none !important;
-    --collection-card-title-size: 1.1rem !important;
-    --callout-border-radii: 8px !important;
-    --image-border-radii: 8px !important;
-    --primary-color: #F46E6F !important;
-    --color-bg-default: var(--color-bg-default) !important;
-    --color-text-default: var(--color-text-default) !important;
-    --secondary-bg: var(--color-bg-secondary) !important;
-    --heading-text-default: var(--color-text-default) !important;
-    --color-border-default: var(--color-border-default);
-    --color-card-bg: var(--color-bg-default);
-    --cta-border-radii: 40px !important;
-    --cta-bg-color: var(--color-bg-secondary) !important;
-    --cta-text-color: var(--color-text-default) !important;
-    --container-width: 800px !important;
-    --cover-max-height: 290px !important;
+  --cta-text-hover-color: #ffffff !important;
+  --navbar-button-text-color: var(--color-text-default) !important;
+  --header-dots: #E1E1E1;
+  --layout-border: 1px;
+  --collection-card-content-padding: 16px !important;
+  --collection-card-border-radii: 12px !important;
+  --collection-card-gap: 16px !important;
+  --collection-card-cover-height-large: 380px !important;
+  --collection-card-icon-display: none !important;
+  --collection-card-title-size: 1.1rem !important;
+  --callout-border-radii: 8px !important;
+  --image-border-radii: 8px !important;
+  --primary-color: #F46E6F !important;
+  --color-bg-default: var(--color-bg-default) !important;
+  --color-text-default: var(--color-text-default) !important;
+  --secondary-bg: var(--color-bg-secondary) !important;
+  --heading-text-default: var(--color-text-default) !important;
+  --color-border-default: var(--color-border-default);
+  --color-ui-hover-bg: var(--color-bg-secondary);
+  --color-card-bg: var(--color-bg-default);
+  --cta-border-radii: 40px !important;
+  --cta-bg-color: var(--color-bg-secondary) !important;
+  --cta-text-color: var(--color-text-default) !important;
+  --container-width: 800px !important;
+  --cover-max-height: 290px !important;
 }
 
-/* Премахваме твърдите цветове от theme-dark, за да ползва тези от Super */
 .theme-dark {
-    --header-dots: #373737 !important;
-    --secondary-bg: var(--color-bg-secondary) !important;
-    --color-bg-default: var(--color-bg-default) !important;
-    --color-border-default: var(--color-border-default) !important;
-    --color-text-default: var(--color-text-default) !important;
-    --heading-text-default: var(--color-text-default) !important;
+  --heading-text-default: var(--color-text-default) !important;
+  --color-bg-default: var(--color-bg-default) !important;
+  --color-border-default: var(--color-border-default) !important;
+  --color-text-default: var(--color-text-default) !important;
+  --secondary-bg: var(--color-bg-secondary) !important;
+  --cta-bg-color: var(--color-bg-secondary) !important;
+  --cta-text-color: var(--color-text-default) !important;
+  --header-dots: #373737 !important;
 }
 
-.notion-dropdown__button svg:first-of-type, 
-.notion-dropdown__menu-header, 
-.notion-toggle.bg-brown, 
-.notion-toggle__trigger, 
+.notion-dropdown__button svg:first-of-type,
+.notion-dropdown__menu-header,
+.notion-toggle.bg-brown,
+.notion-toggle__trigger,
 .super-navbar.hidden {
-    display: none !important;
+  display: none !important;
 }
 
 body {
-    -webkit-font-smoothing: antialiased !important;
-    -moz-osx-font-smoothing: grayscale !important;
-    text-rendering: optimizeLegibility !important;
-    background-color: var(--color-bg-default) !important;
-    color: var(--color-text-default) !important;
+  background-color: var(--color-bg-default) !important;
+  color: var(--color-text-default) !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  text-rendering: optimizeLegibility !important;
 }
 
 body :not(strong) {
-    font-weight: 100 !important;
+  font-weight: 100 !important;
 }
 
 .super-root {
-    max-width: 1400px !important;
-    margin: 0 auto !important;
-}
-
-.notion-root {
-    padding-top: 4vh !important;
-    padding-bottom: 12vh !important;
-}
-
-@media all and (min-width: 861px) {
-    .super-content {
-        width: 800px !important;
-        max-width: 100% !important;
-    }
-    .super-content-wrapper {
-        flex-grow: 0 !important;
-        width: auto !important;
-        border-right: var(--layout-border) solid var(--color-border-default) !important;
-        border-left: var(--layout-border) solid var(--color-border-default) !important;
-    }
-    .notion-header {
-        display: flex !important;
-        justify-content: center !important;
-    }
-    .super-navbar {
-        background: transparent !important;
-        max-width: 24vw !important;
-        min-width: 12vw !important;
-        height: 100vh !important;
-        position: sticky !important;
-        display: flex !important;
-        top: 0 !important;
-    }
-    .super-root {
-        flex-direction: row !important;
-        justify-content: center !important;
-    }
-}
-
-.super-navbar__cta {
-    padding: 10px 18px !important;
-    border-radius: var(--cta-border-radii) !important;
-    width: 100% !important;
-    border: 1px solid var(--color-border-default) !important;
-    background: var(--cta-bg-color) !important;
-    color: var(--cta-text-color) !important;
-}
-
-.super-navbar__cta:hover {
-    background: var(--cta-bg-hover-color) !important;
-    color: var(--cta-text-hover-color) !important;
-}
-
-h1, h2, h3, .notion-heading {
-    color: var(--heading-text-default) !important;
-    font-weight: 100 !important;
-}
-
-.notion-collection-card {
-    background-color: var(--color-bg-default) !important;
-    border: 1px solid var(--color-border-default) !important;
-}
+  max-width: 1400px !important;
+  margin: 0 auto !important;
