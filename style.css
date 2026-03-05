@@ -37,11 +37,10 @@
   --header-dots: #373737 !important;
 }
 
-/* ФИКС ЗА СТРУКТУРАТА - ВРЪЩА НАВИГАЦИЯТА ВЛЯВО */
 @media all and (min-width: 861px) {
   html, body, #__next, .super-root {
     display: flex !important;
-    flex-direction: row !important; /* Това държи навигацията отстрани */
+    flex-direction: row !important;
     align-items: stretch !important;
     min-height: 100vh !important;
   }
@@ -66,7 +65,6 @@
   }
 }
 
-/* Мобилна подредба */
 @media all and (max-width: 860px) {
   .super-root {
     flex-direction: column !important;
@@ -98,7 +96,6 @@ body :not(strong) {
   margin: 0 auto !important;
 }
 
-/* Оправяне на заглавията и текстовете */
 h1, h2, h3, .notion-header__title, .notion-text {
   color: var(--heading-text-default) !important;
 }
